@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelperX</title>
+    <style>
+        body {
+            background-color: #1a1a1a; /* Dark background */
+            color: #ffffff; /* White text */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            width: 250px;
+            border: 2px solid #ffffff; /* White border */
+            border-radius: 25px; /* Rounded corners */
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 20px;
+            background-color: #333333; /* Dark input background */
+            color: #ffffff; /* White text */
+        }
+
+        input[type="text"]::placeholder {
+            color: #cccccc; /* Light grey placeholder text */
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #f0f0f0; /* Whitish button */
+            color: #000000; /* Black text */
+            border: none;
+            border-radius: 25px; /* Rounded corners */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e0e0e0; /* Lighter whitish on hover */
+        }
+
+        /* Optional: Adding some styles for the container */
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px; /* Rounded corners for the container */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+        }
+
+        img {
+            width: 100px; /* Adjust image width */
+            margin-bottom: 20px; /* Space below the image */
+        }
+    </style>
+    <script>
+        function redirect() {
+            var code = document.getElementById("codeInput").value;
+            var url;
+
+            switch (code) {
+                case "677":
+                    url = "https://www.youtube.com";
+                    break;
+                case "179":
+                    url = "https://www.google.com";
+                    break;
+                case "808":
+                    url = "https://www.instagram.com";
+                    break;
+                default:
+                    alert("Invalid code!");
+                    return;
+            }
+
+            window.location.href = url;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="HelperX Logo"> <!-- Replace with your image filename -->
+        <h1>Enter Login Code</h1>
+        <input type="text" id="codeInput" placeholder="Enter code">
+        <button onclick="redirect()">Login</button>
+    </div>
+</body>
+</html>
